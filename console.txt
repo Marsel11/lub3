@@ -1,0 +1,175 @@
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (master)
+$ git config --global user.name "Marsel11"
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (master)
+$ git config --global user.email "marsel123iskandarov@gmail.com"
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (master)
+$ git init
+Initialized empty Git repository in C:/Users/itsfo/Desktop/Frol/Исканадров/.git/
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        logs/
+        photo s listka.jpg
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (master)
+$ git add .
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (master)
+$ git clone https://github.com/Marsel11/lub2.git
+Cloning into 'lub2'...
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 8 (delta 0), reused 8 (delta 0), pack-reused 0
+Receiving objects: 100% (8/8), done.
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitignore
+        new file:   logs/log1.txt
+        new file:   logs/log3.txt
+        new file:   photo s listka.jpg
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        lub2/
+
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (master)
+$ git add .
+warning: adding embedded git repository: lub2
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> lub2
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached lub2
+hint:
+hint: See "git help submodule" for more information.
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitignore
+        new file:   logs/log1.txt
+        new file:   logs/log3.txt
+        new file:   lub2
+        new file:   photo s listka.jpg
+
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (master)
+$ git commit -m "upd first commit"
+[master (root-commit) c2493a3] upd first commit
+ 5 files changed, 4 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 logs/log1.txt
+ create mode 100644 logs/log3.txt
+ create mode 160000 lub2
+ create mode 100644 photo s listka.jpg
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (master)
+$ git branch Iskandarov
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (master)
+$ git checkout Iskandarov
+Switched to branch 'Iskandarov'
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (Iskandarov)
+$ git status
+On branch Iskandarov
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+        console.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (Iskandarov)
+$ git add .
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (Iskandarov)
+$ git status
+On branch Iskandarov
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.md
+        new file:   console.txt
+
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (Iskandarov)
+$ git checkout master
+Switched to branch 'master'
+A       README.md
+A       console.txt
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (master)
+$ git merge Iskandarov
+Already up to date.
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.md
+        new file:   console.txt
+
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (master)
+$ git checkout Iskandarov
+Switched to branch 'Iskandarov'
+A       README.md
+A       console.txt
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (Iskandarov)
+$ git commit -m "second commit"
+[Iskandarov 135664a] second commit
+ 2 files changed, 1 insertion(+)
+ create mode 100644 README.md
+ create mode 100644 console.txt
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (Iskandarov)
+$ git checkout master
+Switched to branch 'master'
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (master)
+$ git merge Iskandarov
+Updating c2493a3..135664a
+Fast-forward
+ README.md   | 1 +
+ console.txt | 0
+ 2 files changed, 1 insertion(+)
+ create mode 100644 README.md
+ create mode 100644 console.txt
+
+itsfo@FrolovPC MINGW64 ~/Desktop/Frol/Исканадров (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
